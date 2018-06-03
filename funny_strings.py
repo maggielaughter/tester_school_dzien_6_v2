@@ -1,5 +1,5 @@
 """Module for funny string manipulations"""
-import random
+from random import randint
 import string
 
 
@@ -31,8 +31,20 @@ print(bubbleize('Katowice'))
 print(bubbleize2('Katowice'))
 
 def randomize(text):
-    pass
+    """
+        Program to randomized strings
+        :param text: text to randomize d
+        :return: randomized text
+        """
+    chars = []
+    for idx, char in enumerate(text):
+        if randint(0,1):
+            chars.append(char.upper())
+        else:
+            chars.append(char.lower())
+    return ''.join(chars)
 
+print(randomize('Salamandra'))
 
 def numberize(text):
     text=text.lower()
@@ -50,3 +62,4 @@ def numberize(text):
             new_word += char
     return new_word
 
+print(numberize('Anetka mini polka'))
