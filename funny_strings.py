@@ -27,8 +27,6 @@ def bubbleize2(text):
             chars.append(char.lower())
     return ''.join(chars)
 
-print(bubbleize('Katowice'))
-print(bubbleize2('Katowice'))
 
 def randomize(text):
     """
@@ -44,7 +42,6 @@ def randomize(text):
             chars.append(char.lower())
     return ''.join(chars)
 
-print(randomize('Salamandra'))
 
 def numberize(text):
     text=text.lower()
@@ -61,5 +58,3 @@ def numberize(text):
         else:
             new_word += char
     return new_word
-
-print(numberize('Anetka mini polka'))
